@@ -10,6 +10,7 @@ locals {
     certificate      = var.certificate
     basic_auth       = var.basic_auth
     auth_file        = var.basic_auth != null ? "${var.hostname}-auth.conf" : ""
+    allow_ssl        = var.allow_ssl
     allow_non_ssl    = var.allow_non_ssl
     redirect_non_ssl = var.redirect_non_ssl
     timeout_seconds  = var.timeout_seconds

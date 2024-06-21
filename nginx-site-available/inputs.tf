@@ -25,6 +25,10 @@ variable "basic_auth" {
   })
   default = null
 }
+variable "allow_ssl" {
+  type    = bool
+  default = true
+}
 variable "allow_non_ssl" {
   type    = bool
   default = false

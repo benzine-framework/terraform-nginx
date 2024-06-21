@@ -17,8 +17,8 @@ locals {
     extra_upstreams  = var.extra_upstreams
     extra_locations  = var.extra_locations
   })
-  cert_public  = "${var.certificate.issuer_pem}${var.certificate.certificate_pem}"
-  cert_private = var.certificate.private_key_pem
+  cert_public  = var.certificate != null ? "${var.certificate.issuer_pem}${var.certificate.certificate_pem}" : ""
+  cert_private = var.certificate != null ? var.certificate.private_key_pem : ""
   filenames = {
     nginx           = "${var.hostname}.conf"
     auth            = "${var.hostname}.auth"

@@ -53,7 +53,6 @@ variable "config_prefix" {
   type    = string
   default = "nginx"
 }
-
 variable "extra_upstreams" {
   type = list(object({
     name    = string
